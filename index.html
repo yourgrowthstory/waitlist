@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth Story</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafa;
+      color: #1d2d2c;
+    }
+    header {
+      background: linear-gradient(135deg, #1abc9c, #3498db, #2ecc71);
+      color: white;
+      padding: 20px 20px 0 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      padding: 20px;
+    }
+    .logo-placeholder {
+      margin-bottom: 20px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.4);
+      width: 120px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      line-height: 60px;
+      text-align: center;
+    }
+    .hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1abc9c;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .sticky-cta:hover {
+      background-color: #16a085;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section h2 {
+      color: #2c3e50;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    section p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    .form-section {
+      background-color: #ecf9f1;
+      padding: 50px 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #16a085;
+    }
+    .thank-you-message {
+      display: none;
+      text-align: center;
+      font-size: 1.2em;
+      color: #2c3e50;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .contact {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      form.style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-placeholder">Logo</div>
+    <h1>A private space to save your child’s proud moments and joyful memories, big or small</h1>
+    <img class="hero-image" src="https://imgur.com/a/wLwdksP" alt="Mother and child showing photos to father on tablet">
+  </header>
+
+  <section>
+    <h2>What We Do</h2>
+    <p>Growth Story helps parents organize their child’s achievements — so milestones don’t get lost in endless photo libraries.</p>
+    <p>We organize memories which you can privately share and keep everything in one place.</p>
+    <p>In future, you’ll even be able to create keepsake books or pull highlights for college applications.</p>
+  </section>
+
+  <section>
+    <h2>Who Is This For</h2>
+    <p>Growth Story is built for intentional parents of kids aged 8–16 who want to capture what matters — proud moments, joyful memories, and milestones along the way.</p>
+    <p>Whether you’re the quietly ambitious parent, proactively supporting your child’s growth and future opportunities, or the memory keeper, wanting to preserve their childhood story before it slips away — Growth Story helps you stay organized and proud of the journey you're on together.</p>
+  </section>
+
+  <section>
+    <h2>What's In It For Me?</h2>
+    <p><strong>Memories, Neatly Organized:</strong> No more endless scrolling — easily save and find your child’s proudest moments.</p>
+    <p><strong>Timely Nudges, Not More Work:</strong> Get gentle reminders regularly or after specific events so you never miss capturing a milestone.</p>
+    <p><strong>A Living Record of Growth:</strong> Build a beautiful portfolio to reflect on how far your child has come — or even use for college and scholarship applications.</p>
+  </section>
+
+  <section class="form-section">
+    <h2>Join the Waiting List</h2>
+    <form action="#" method="post" onsubmit="handleSubmit(event)">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number (with country code)" required>
+      <textarea name="message" placeholder="Why are you interested in Growth Story?" rows="5"></textarea>
+      <button type="submit">Join the Waitlist</button>
+    </form>
+    <div id="thank-you" class="thank-you-message">
+      Thank you for joining the waitlist! We'll be in touch soon.
+    </div>
+    <div class="contact">Have questions? Contact Niketha at +351 910 261 001</div>
+  </section>
+
+  <button class="sticky-cta" onclick="document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });">Join the Waitlist</button>
+
+  <footer>
+    &copy; 2025 Growth Story. All rights reserved.
+  </footer>
+
+</body>
+</html>
