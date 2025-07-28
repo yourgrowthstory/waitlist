@@ -13,6 +13,7 @@
       color: #1d2d2c;
     }
     header {
+      position: relative;
       background: linear-gradient(135deg, #1abc9c, #3498db, #2ecc71);
       color: white;
       padding: 20px 20px 40px 20px;
@@ -40,6 +41,17 @@
       object-fit: cover;
       display: block;
       margin-bottom: 20px;
+    }
+    .hero-overlay-text {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
     }
     .header-cta {
       background-color: #1abc9c;
@@ -131,6 +143,7 @@
   <header>
     <div class="logo-placeholder">Logo</div>
     <h1>A private space to save your child’s proud moments and joyful memories, big or small</h1>
+    <div class="hero-overlay-text">Growth Story</div>
     <img class="hero-image" src="https://i.imgur.com/FcUrMPe.png" alt="Mother and child showing photos to father on tablet">
     <button class="header-cta" onclick="scrollToForm()">Join the Waitlist</button>
   </header>
